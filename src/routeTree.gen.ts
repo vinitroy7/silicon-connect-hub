@@ -13,7 +13,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutAoaRouteImport } from './routes/about-aoa'
 import { Route as AboutSocietyRouteImport } from './routes/about-society'
 import { Route as CommitteeRouteImport } from './routes/committee'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as NoticesRouteImport } from './routes/notices'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as VendorsRouteImport } from './routes/vendors'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -35,9 +39,29 @@ const CommitteeRoute = CommitteeRouteImport.update({
   path: '/committee',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticesRoute = NoticesRouteImport.update({
+  id: '/notices',
+  path: '/notices',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsRoute = VendorsRouteImport.update({
+  id: '/vendors',
+  path: '/vendors',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -46,14 +70,22 @@ export interface FileRoutesByFullPath {
   '/about-aoa': typeof AboutAoaRoute
   '/about-society': typeof AboutSocietyRoute
   '/committee': typeof CommitteeRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/notices': typeof NoticesRoute
   '/services': typeof ServicesRoute
+  '/vendors': typeof VendorsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-aoa': typeof AboutAoaRoute
   '/about-society': typeof AboutSocietyRoute
   '/committee': typeof CommitteeRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/notices': typeof NoticesRoute
   '/services': typeof ServicesRoute
+  '/vendors': typeof VendorsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,20 +93,46 @@ export interface FileRoutesById {
   '/about-aoa': typeof AboutAoaRoute
   '/about-society': typeof AboutSocietyRoute
   '/committee': typeof CommitteeRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/notices': typeof NoticesRoute
   '/services': typeof ServicesRoute
+  '/vendors': typeof VendorsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about-aoa' | '/about-society' | '/committee' | '/services'
+  fullPaths:
+    | '/'
+    | '/about-aoa'
+    | '/about-society'
+    | '/committee'
+    | '/events'
+    | '/gallery'
+    | '/notices'
+    | '/services'
+    | '/vendors'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about-aoa' | '/about-society' | '/committee' | '/services'
+  to:
+    | '/'
+    | '/about-aoa'
+    | '/about-society'
+    | '/committee'
+    | '/events'
+    | '/gallery'
+    | '/notices'
+    | '/services'
+    | '/vendors'
   id:
     | '__root__'
     | '/'
     | '/about-aoa'
     | '/about-society'
     | '/committee'
+    | '/events'
+    | '/gallery'
+    | '/notices'
     | '/services'
+    | '/vendors'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -82,7 +140,11 @@ export interface RootRouteChildren {
   AboutAoaRoute: typeof AboutAoaRoute
   AboutSocietyRoute: typeof AboutSocietyRoute
   CommitteeRoute: typeof CommitteeRoute
+  EventsRoute: typeof EventsRoute
+  GalleryRoute: typeof GalleryRoute
+  NoticesRoute: typeof NoticesRoute
   ServicesRoute: typeof ServicesRoute
+  VendorsRoute: typeof VendorsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -115,11 +177,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CommitteeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notices': {
+      id: '/notices'
+      path: '/notices'
+      fullPath: '/notices'
+      preLoaderRoute: typeof NoticesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors': {
+      id: '/vendors'
+      path: '/vendors'
+      fullPath: '/vendors'
+      preLoaderRoute: typeof VendorsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -130,7 +220,11 @@ const rootRouteChildren: RootRouteChildren = {
   AboutAoaRoute: AboutAoaRoute,
   AboutSocietyRoute: AboutSocietyRoute,
   CommitteeRoute: CommitteeRoute,
+  EventsRoute: EventsRoute,
+  GalleryRoute: GalleryRoute,
+  NoticesRoute: NoticesRoute,
   ServicesRoute: ServicesRoute,
+  VendorsRoute: VendorsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
