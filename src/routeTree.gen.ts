@@ -10,33 +10,232 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutAoaRouteImport } from './routes/about-aoa'
+import { Route as AboutSocietyRouteImport } from './routes/about-society'
+import { Route as CommitteeRouteImport } from './routes/committee'
+import { Route as ComplaintsRouteImport } from './routes/complaints'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DownloadsRouteImport } from './routes/downloads'
+import { Route as EmergencyContactsRouteImport } from './routes/emergency-contacts'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as NoticesRouteImport } from './routes/notices'
+import { Route as ResidentCornerRouteImport } from './routes/resident-corner'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as VendorsRouteImport } from './routes/vendors'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutAoaRoute = AboutAoaRouteImport.update({
+  id: '/about-aoa',
+  path: '/about-aoa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutSocietyRoute = AboutSocietyRouteImport.update({
+  id: '/about-society',
+  path: '/about-society',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommitteeRoute = CommitteeRouteImport.update({
+  id: '/committee',
+  path: '/committee',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComplaintsRoute = ComplaintsRouteImport.update({
+  id: '/complaints',
+  path: '/complaints',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DownloadsRoute = DownloadsRouteImport.update({
+  id: '/downloads',
+  path: '/downloads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmergencyContactsRoute = EmergencyContactsRouteImport.update({
+  id: '/emergency-contacts',
+  path: '/emergency-contacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticesRoute = NoticesRouteImport.update({
+  id: '/notices',
+  path: '/notices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidentCornerRoute = ResidentCornerRouteImport.update({
+  id: '/resident-corner',
+  path: '/resident-corner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VendorsRoute = VendorsRouteImport.update({
+  id: '/vendors',
+  path: '/vendors',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-aoa': typeof AboutAoaRoute
+  '/about-society': typeof AboutSocietyRoute
+  '/committee': typeof CommitteeRoute
+  '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
+  '/downloads': typeof DownloadsRoute
+  '/emergency-contacts': typeof EmergencyContactsRoute
+  '/events': typeof EventsRoute
+  '/faqs': typeof FaqsRoute
+  '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
+  '/notices': typeof NoticesRoute
+  '/resident-corner': typeof ResidentCornerRoute
+  '/services': typeof ServicesRoute
+  '/vendors': typeof VendorsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-aoa': typeof AboutAoaRoute
+  '/about-society': typeof AboutSocietyRoute
+  '/committee': typeof CommitteeRoute
+  '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
+  '/downloads': typeof DownloadsRoute
+  '/emergency-contacts': typeof EmergencyContactsRoute
+  '/events': typeof EventsRoute
+  '/faqs': typeof FaqsRoute
+  '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
+  '/notices': typeof NoticesRoute
+  '/resident-corner': typeof ResidentCornerRoute
+  '/services': typeof ServicesRoute
+  '/vendors': typeof VendorsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-aoa': typeof AboutAoaRoute
+  '/about-society': typeof AboutSocietyRoute
+  '/committee': typeof CommitteeRoute
+  '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
+  '/downloads': typeof DownloadsRoute
+  '/emergency-contacts': typeof EmergencyContactsRoute
+  '/events': typeof EventsRoute
+  '/faqs': typeof FaqsRoute
+  '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
+  '/notices': typeof NoticesRoute
+  '/resident-corner': typeof ResidentCornerRoute
+  '/services': typeof ServicesRoute
+  '/vendors': typeof VendorsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about-aoa'
+    | '/about-society'
+    | '/committee'
+    | '/complaints'
+    | '/contact'
+    | '/downloads'
+    | '/emergency-contacts'
+    | '/events'
+    | '/faqs'
+    | '/gallery'
+    | '/login'
+    | '/notices'
+    | '/resident-corner'
+    | '/services'
+    | '/vendors'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about-aoa'
+    | '/about-society'
+    | '/committee'
+    | '/complaints'
+    | '/contact'
+    | '/downloads'
+    | '/emergency-contacts'
+    | '/events'
+    | '/faqs'
+    | '/gallery'
+    | '/login'
+    | '/notices'
+    | '/resident-corner'
+    | '/services'
+    | '/vendors'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-aoa'
+    | '/about-society'
+    | '/committee'
+    | '/complaints'
+    | '/contact'
+    | '/downloads'
+    | '/emergency-contacts'
+    | '/events'
+    | '/faqs'
+    | '/gallery'
+    | '/login'
+    | '/notices'
+    | '/resident-corner'
+    | '/services'
+    | '/vendors'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutAoaRoute: typeof AboutAoaRoute
+  AboutSocietyRoute: typeof AboutSocietyRoute
+  CommitteeRoute: typeof CommitteeRoute
+  ComplaintsRoute: typeof ComplaintsRoute
+  ContactRoute: typeof ContactRoute
+  DownloadsRoute: typeof DownloadsRoute
+  EmergencyContactsRoute: typeof EmergencyContactsRoute
+  EventsRoute: typeof EventsRoute
+  FaqsRoute: typeof FaqsRoute
+  GalleryRoute: typeof GalleryRoute
+  LoginRoute: typeof LoginRoute
+  NoticesRoute: typeof NoticesRoute
+  ResidentCornerRoute: typeof ResidentCornerRoute
+  ServicesRoute: typeof ServicesRoute
+  VendorsRoute: typeof VendorsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +247,132 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about-aoa': {
+      id: '/about-aoa'
+      path: '/about-aoa'
+      fullPath: '/about-aoa'
+      preLoaderRoute: typeof AboutAoaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-society': {
+      id: '/about-society'
+      path: '/about-society'
+      fullPath: '/about-society'
+      preLoaderRoute: typeof AboutSocietyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/committee': {
+      id: '/committee'
+      path: '/committee'
+      fullPath: '/committee'
+      preLoaderRoute: typeof CommitteeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/complaints': {
+      id: '/complaints'
+      path: '/complaints'
+      fullPath: '/complaints'
+      preLoaderRoute: typeof ComplaintsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/downloads': {
+      id: '/downloads'
+      path: '/downloads'
+      fullPath: '/downloads'
+      preLoaderRoute: typeof DownloadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/emergency-contacts': {
+      id: '/emergency-contacts'
+      path: '/emergency-contacts'
+      fullPath: '/emergency-contacts'
+      preLoaderRoute: typeof EmergencyContactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notices': {
+      id: '/notices'
+      path: '/notices'
+      fullPath: '/notices'
+      preLoaderRoute: typeof NoticesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resident-corner': {
+      id: '/resident-corner'
+      path: '/resident-corner'
+      fullPath: '/resident-corner'
+      preLoaderRoute: typeof ResidentCornerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vendors': {
+      id: '/vendors'
+      path: '/vendors'
+      fullPath: '/vendors'
+      preLoaderRoute: typeof VendorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutAoaRoute: AboutAoaRoute,
+  AboutSocietyRoute: AboutSocietyRoute,
+  CommitteeRoute: CommitteeRoute,
+  ComplaintsRoute: ComplaintsRoute,
+  ContactRoute: ContactRoute,
+  DownloadsRoute: DownloadsRoute,
+  EmergencyContactsRoute: EmergencyContactsRoute,
+  EventsRoute: EventsRoute,
+  FaqsRoute: FaqsRoute,
+  GalleryRoute: GalleryRoute,
+  LoginRoute: LoginRoute,
+  NoticesRoute: NoticesRoute,
+  ResidentCornerRoute: ResidentCornerRoute,
+  ServicesRoute: ServicesRoute,
+  VendorsRoute: VendorsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
