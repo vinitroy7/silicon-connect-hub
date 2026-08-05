@@ -10,33 +10,79 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutAoaRouteImport } from './routes/about-aoa'
+import { Route as AboutSocietyRouteImport } from './routes/about-society'
+import { Route as CommitteeRouteImport } from './routes/committee'
+import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutAoaRoute = AboutAoaRouteImport.update({
+  id: '/about-aoa',
+  path: '/about-aoa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutSocietyRoute = AboutSocietyRouteImport.update({
+  id: '/about-society',
+  path: '/about-society',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommitteeRoute = CommitteeRouteImport.update({
+  id: '/committee',
+  path: '/committee',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-aoa': typeof AboutAoaRoute
+  '/about-society': typeof AboutSocietyRoute
+  '/committee': typeof CommitteeRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-aoa': typeof AboutAoaRoute
+  '/about-society': typeof AboutSocietyRoute
+  '/committee': typeof CommitteeRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-aoa': typeof AboutAoaRoute
+  '/about-society': typeof AboutSocietyRoute
+  '/committee': typeof CommitteeRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/about-aoa' | '/about-society' | '/committee' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/about-aoa' | '/about-society' | '/committee' | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-aoa'
+    | '/about-society'
+    | '/committee'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutAoaRoute: typeof AboutAoaRoute
+  AboutSocietyRoute: typeof AboutSocietyRoute
+  CommitteeRoute: typeof CommitteeRoute
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +94,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about-aoa': {
+      id: '/about-aoa'
+      path: '/about-aoa'
+      fullPath: '/about-aoa'
+      preLoaderRoute: typeof AboutAoaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-society': {
+      id: '/about-society'
+      path: '/about-society'
+      fullPath: '/about-society'
+      preLoaderRoute: typeof AboutSocietyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/committee': {
+      id: '/committee'
+      path: '/committee'
+      fullPath: '/committee'
+      preLoaderRoute: typeof CommitteeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutAoaRoute: AboutAoaRoute,
+  AboutSocietyRoute: AboutSocietyRoute,
+  CommitteeRoute: CommitteeRoute,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
