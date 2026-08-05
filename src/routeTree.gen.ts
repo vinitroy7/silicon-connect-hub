@@ -14,10 +14,13 @@ import { Route as AboutAoaRouteImport } from './routes/about-aoa'
 import { Route as AboutSocietyRouteImport } from './routes/about-society'
 import { Route as CommitteeRouteImport } from './routes/committee'
 import { Route as ComplaintsRouteImport } from './routes/complaints'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DownloadsRouteImport } from './routes/downloads'
 import { Route as EmergencyContactsRouteImport } from './routes/emergency-contacts'
 import { Route as EventsRouteImport } from './routes/events'
+import { Route as FaqsRouteImport } from './routes/faqs'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as NoticesRouteImport } from './routes/notices'
 import { Route as ResidentCornerRouteImport } from './routes/resident-corner'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -48,6 +51,11 @@ const ComplaintsRoute = ComplaintsRouteImport.update({
   path: '/complaints',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DownloadsRoute = DownloadsRouteImport.update({
   id: '/downloads',
   path: '/downloads',
@@ -63,9 +71,19 @@ const EventsRoute = EventsRouteImport.update({
   path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NoticesRoute = NoticesRouteImport.update({
@@ -95,10 +113,13 @@ export interface FileRoutesByFullPath {
   '/about-society': typeof AboutSocietyRoute
   '/committee': typeof CommitteeRoute
   '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/emergency-contacts': typeof EmergencyContactsRoute
   '/events': typeof EventsRoute
+  '/faqs': typeof FaqsRoute
   '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
   '/notices': typeof NoticesRoute
   '/resident-corner': typeof ResidentCornerRoute
   '/services': typeof ServicesRoute
@@ -110,10 +131,13 @@ export interface FileRoutesByTo {
   '/about-society': typeof AboutSocietyRoute
   '/committee': typeof CommitteeRoute
   '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/emergency-contacts': typeof EmergencyContactsRoute
   '/events': typeof EventsRoute
+  '/faqs': typeof FaqsRoute
   '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
   '/notices': typeof NoticesRoute
   '/resident-corner': typeof ResidentCornerRoute
   '/services': typeof ServicesRoute
@@ -126,10 +150,13 @@ export interface FileRoutesById {
   '/about-society': typeof AboutSocietyRoute
   '/committee': typeof CommitteeRoute
   '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
   '/downloads': typeof DownloadsRoute
   '/emergency-contacts': typeof EmergencyContactsRoute
   '/events': typeof EventsRoute
+  '/faqs': typeof FaqsRoute
   '/gallery': typeof GalleryRoute
+  '/login': typeof LoginRoute
   '/notices': typeof NoticesRoute
   '/resident-corner': typeof ResidentCornerRoute
   '/services': typeof ServicesRoute
@@ -143,10 +170,13 @@ export interface FileRouteTypes {
     | '/about-society'
     | '/committee'
     | '/complaints'
+    | '/contact'
     | '/downloads'
     | '/emergency-contacts'
     | '/events'
+    | '/faqs'
     | '/gallery'
+    | '/login'
     | '/notices'
     | '/resident-corner'
     | '/services'
@@ -158,10 +188,13 @@ export interface FileRouteTypes {
     | '/about-society'
     | '/committee'
     | '/complaints'
+    | '/contact'
     | '/downloads'
     | '/emergency-contacts'
     | '/events'
+    | '/faqs'
     | '/gallery'
+    | '/login'
     | '/notices'
     | '/resident-corner'
     | '/services'
@@ -173,10 +206,13 @@ export interface FileRouteTypes {
     | '/about-society'
     | '/committee'
     | '/complaints'
+    | '/contact'
     | '/downloads'
     | '/emergency-contacts'
     | '/events'
+    | '/faqs'
     | '/gallery'
+    | '/login'
     | '/notices'
     | '/resident-corner'
     | '/services'
@@ -189,10 +225,13 @@ export interface RootRouteChildren {
   AboutSocietyRoute: typeof AboutSocietyRoute
   CommitteeRoute: typeof CommitteeRoute
   ComplaintsRoute: typeof ComplaintsRoute
+  ContactRoute: typeof ContactRoute
   DownloadsRoute: typeof DownloadsRoute
   EmergencyContactsRoute: typeof EmergencyContactsRoute
   EventsRoute: typeof EventsRoute
+  FaqsRoute: typeof FaqsRoute
   GalleryRoute: typeof GalleryRoute
+  LoginRoute: typeof LoginRoute
   NoticesRoute: typeof NoticesRoute
   ResidentCornerRoute: typeof ResidentCornerRoute
   ServicesRoute: typeof ServicesRoute
@@ -236,6 +275,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComplaintsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/downloads': {
       id: '/downloads'
       path: '/downloads'
@@ -257,11 +303,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/notices': {
@@ -301,10 +361,13 @@ const rootRouteChildren: RootRouteChildren = {
   AboutSocietyRoute: AboutSocietyRoute,
   CommitteeRoute: CommitteeRoute,
   ComplaintsRoute: ComplaintsRoute,
+  ContactRoute: ContactRoute,
   DownloadsRoute: DownloadsRoute,
   EmergencyContactsRoute: EmergencyContactsRoute,
   EventsRoute: EventsRoute,
+  FaqsRoute: FaqsRoute,
   GalleryRoute: GalleryRoute,
+  LoginRoute: LoginRoute,
   NoticesRoute: NoticesRoute,
   ResidentCornerRoute: ResidentCornerRoute,
   ServicesRoute: ServicesRoute,
