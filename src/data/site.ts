@@ -1,12 +1,12 @@
 export const SOCIETY = {
   name: "Amrapali Silicon City",
   aoa: "Apartment Owners Association",
-  phase: "Phase 1",
+  registration: "R/GBN/15963/2025-2026",
   address: "Amrapali Silicon City, Sector 76, Noida, Uttar Pradesh 201301",
-  phone: "+91 120 400 0000",
-  email: "office@amrapalisiliconcityaoa.org",
+  phone: "0120 510 0486",
+  email: "communication@ascaoa.com",
   hours: "Mon – Sat, 10:00 AM – 6:00 PM (Sunday closed)",
-  whatsapp: "911204000000",
+  whatsapp: "911205100486",
   mapEmbed:
     "https://www.google.com/maps?q=Amrapali+Silicon+City+Sector+76+Noida&output=embed",
 };
