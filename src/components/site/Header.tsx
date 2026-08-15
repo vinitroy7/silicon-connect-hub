@@ -78,7 +78,7 @@ export function Header() {
 
           <div className="ml-auto flex items-center gap-2 lg:ml-0">
             <Button asChild variant="brand" size="sm" className="hidden sm:inline-flex">
-              <Link to="/login">Resident Login</Link>
+              <Link to="/complaints">Raise Complaint</Link>
             </Button>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild className="lg:hidden">
@@ -100,9 +100,9 @@ export function Header() {
                     </Link>
                   ))}
                   <Button asChild variant="brand" className="mt-4">
-                    <Link to="/login" onClick={() => setOpen(false)}>
-                      Resident Login
-                    </Link>
+                    <a href={`tel:${SOCIETY.phone.replace(/\s/g, "")}`}>
+                      Call Helpdesk {SOCIETY.phone}
+                    </a>
                   </Button>
                 </div>
               </SheetContent>
