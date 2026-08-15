@@ -162,13 +162,8 @@ function Index() {
               with transparent maintenance, 24x7 security and a vibrant community life.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg" variant="brand">
-                <Link to="/resident-corner">Become Member</Link>
-              </Button>
-              <Button asChild size="lg" variant="glass">
-                <Link to="/login">Resident Login</Link>
-              </Button>
               <Button asChild size="lg" variant="success">
+
                 <Link to="/complaints">Raise Complaint</Link>
               </Button>
               <Button asChild size="lg" variant="glass">
