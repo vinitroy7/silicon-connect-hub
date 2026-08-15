@@ -526,19 +526,19 @@ function Index() {
               className="absolute -top-24 -left-16 size-72 rounded-full bg-white/15 blur-3xl"
             />
             <h2 className="relative font-display text-3xl font-semibold md:text-4xl">
-              Join the association. Strengthen the community.
+              One community. One association.
             </h2>
             <p className="relative mx-auto mt-4 max-w-2xl text-sm text-white/85 md:text-base">
-              Register as a member to access your dashboard, maintenance receipts, QR visitor passes
-              and complaint tracking.
+              Reach the AOA helpdesk for maintenance, security, housekeeping and complaint support —
+              call {SOCIETY.phone} or write to {SOCIETY.email}.
             </p>
             <div className="relative mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg" variant="glass">
-                <Link to="/resident-corner">Become a Member</Link>
+                <Link to="/complaints">Raise a Complaint</Link>
               </Button>
               <Button asChild size="lg" variant="glass">
-                <Link to="/contact">
-                  <MapPin /> Visit AOA Office
+                <Link to="/notices">
+                  <MapPin /> Latest Notices
                 </Link>
               </Button>
             </div>
