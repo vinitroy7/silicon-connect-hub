@@ -2,7 +2,7 @@ export const SOCIETY = {
   name: "Amrapali Silicon City",
   aoa: "Apartment Owners Association",
   phase: "Phase 1",
-  address: "Amrapali Silicon City, Phase 1, Sector 76, Noida, Uttar Pradesh 201301",
+  address: "Amrapali Silicon City, Sector 76, Noida, Uttar Pradesh 201301",
   phone: "+91 120 400 0000",
   email: "office@amrapalisiliconcityaoa.org",
   hours: "Mon – Sat, 10:00 AM – 6:00 PM (Sunday closed)",
@@ -131,7 +131,7 @@ export const NEWS = [
 ];
 
 export const FAQS = [
-  { q: "Who can become a member of the AOA?", a: "Every registered apartment owner of Amrapali Silicon City Phase 1 is eligible for membership. Submit the membership form along with proof of ownership and a copy of your ID at the AOA office or through Resident Corner." },
+  { q: "Who can become a member of the AOA?", a: "Every registered apartment owner of Amrapali Silicon City is eligible for membership. Submit the membership form along with proof of ownership and a copy of your ID at the AOA office or through Resident Corner." },
   { q: "How is the monthly maintenance calculated?", a: "Maintenance is charged on a per sq. ft. super-area basis as approved in the general body meeting, plus applicable sinking fund and utility components. The current rate card is published under Downloads." },
   { q: "How do I raise and track a complaint?", a: "Use the Complaint Portal, pick a category, attach a photo and submit. You receive a ticket number instantly and can track status changes, with email and SMS updates at each stage." },
   { q: "What is the process for tenant registration?", a: "Owners must submit the tenant registration form with the rent agreement, police verification and tenant ID proof. Access cards and vehicle stickers are issued after verification." },

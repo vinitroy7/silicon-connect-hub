@@ -20,7 +20,7 @@ import { Reveal } from "@/components/site/Reveal";
 
 const TITLE = "Complaint Portal — Raise & Track Tickets | Silicon City AOA";
 const DESCRIPTION =
-  "Raise a complaint with Amrapali Silicon City AOA Phase 1 across electricity, water, lift, parking, security, cleaning, gardening, civil and plumbing categories, and track your ticket.";
+  "Raise a complaint with Amrapali Silicon City AOA across electricity, water, lift, parking, security, cleaning, gardening, civil and plumbing categories, and track your ticket.";
 
 export const Route = createFileRoute("/complaints")({
   head: () => ({

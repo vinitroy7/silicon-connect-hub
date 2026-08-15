@@ -80,11 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Amrapali Silicon City AOA — Phase 1, Sector 76 Noida" },
+      { title: "Amrapali Silicon City AOA — Sector 76, Noida" },
       {
         name: "description",
         content:
-          "Official website of Amrapali Silicon City Apartment Owners Association, Phase 1, Sector 76, Noida.",
+          "Official website of Amrapali Silicon City Apartment Owners Association, Sector 76, Noida.",
       },
       { property: "og:site_name", content: "Amrapali Silicon City AOA" },
       { property: "og:type", content: "website" },
@@ -106,12 +106,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Amrapali Silicon City Apartment Owners Association — Phase 1",
+          name: "Amrapali Silicon City Apartment Owners Association —",
           description:
-            "Registered Apartment Owners Association of Amrapali Silicon City Phase 1, Sector 76, Noida.",
+            "Registered Apartment Owners Association of Amrapali Silicon City, Sector 76, Noida.",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Amrapali Silicon City, Phase 1, Sector 76",
+            streetAddress: "Amrapali Silicon City, Sector 76",
             addressLocality: "Noida",
             addressRegion: "Uttar Pradesh",
             postalCode: "201301",

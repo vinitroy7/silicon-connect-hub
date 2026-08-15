@@ -21,7 +21,7 @@ import { QUICK_SERVICES } from "@/data/site";
 
 const TITLE = "Services — Maintenance, Security & Resident Support | Silicon City AOA";
 const DESCRIPTION =
-  "Services delivered by Amrapali Silicon City AOA Phase 1: maintenance, security, housekeeping, horticulture, water, lifts, complaint handling and resident support.";
+  "Services delivered by Amrapali Silicon City AOA: maintenance, security, housekeeping, horticulture, water, lifts, complaint handling and resident support.";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -72,7 +72,7 @@ function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Services the AOA runs for Phase 1"
+        title="Services the AOA runs for the society"
         subtitle="From gate to rooftop — maintenance operations, resident-facing digital services and clear resolution timelines for every category of request."
       />
 

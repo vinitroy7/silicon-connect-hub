@@ -11,7 +11,7 @@ import clubhouseImage from "@/assets/clubhouse.jpg";
 
 const TITLE = "About Society — Master Plan, Facilities & Location | Silicon City AOA";
 const DESCRIPTION =
-  "Master plan, infrastructure, facilities, connectivity, nearby schools, hospitals, metro and shopping around Amrapali Silicon City Phase 1, Sector 76 Noida.";
+  "Master plan, infrastructure, facilities, connectivity, nearby schools, hospitals, metro and shopping around Amrapali Silicon City, Sector 76 Noida.";
 
 export const Route = createFileRoute("/about-society")({
   head: () => ({
@@ -55,7 +55,7 @@ function AboutSociety() {
     <>
       <PageHero
         eyebrow="About Society"
-        title="Amrapali Silicon City, Phase 1 — Sector 76, Noida"
+        title="Amrapali Silicon City — Sector 76, Noida"
         subtitle="A large gated township of 12+ high-rise towers with wide internal roads, extensive green cover and a full amenity deck, minutes from the Aqua Line metro and the Noida–Greater Noida Expressway."
       />
 
@@ -64,7 +64,7 @@ function AboutSociety() {
           <Reveal>
             <img
               src={societyImage}
-              alt="Master-planned towers and walkways at Amrapali Silicon City Phase 1"
+              alt="Master-planned towers and walkways at Amrapali Silicon City"
               width={1280}
               height={960}
               loading="lazy"
@@ -75,7 +75,7 @@ function AboutSociety() {
             <h2 className="text-2xl font-semibold md:text-3xl">Master Plan & Infrastructure</h2>
             <div className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
               <p>
-                Phase 1 is planned around a large central green, with towers positioned along the
+                The society is planned around a large central green, with towers positioned along the
                 perimeter to maximise open space, daylight and cross-ventilation. Internal roads are
                 looped so that fire tenders and ambulances can reach every tower entrance.
               </p>

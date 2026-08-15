@@ -8,7 +8,7 @@ import { Reveal } from "@/components/site/Reveal";
 
 const TITLE = "Resident Corner — Member Services & Requests | Silicon City AOA";
 const DESCRIPTION =
-  "Resident services at Amrapali Silicon City AOA Phase 1: membership, maintenance status, receipts, visitor pass, vehicle registration, tenant registration, amenity booking and more.";
+  "Resident services at Amrapali Silicon City AOA: membership, maintenance status, receipts, visitor pass, vehicle registration, tenant registration, amenity booking and more.";
 
 export const Route = createFileRoute("/resident-corner")({
   head: () => ({

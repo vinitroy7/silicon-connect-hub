@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 
 const TITLE = "About AOA — History, Bylaws & Objectives | Amrapali Silicon City";
 const DESCRIPTION =
-  "History, formation, registration details, bylaws, vision, mission and core values of the Amrapali Silicon City Apartment Owners Association, Phase 1, Sector 76 Noida.";
+  "History, formation, registration details, bylaws, vision, mission and core values of the Amrapali Silicon City Apartment Owners Association, Sector 76 Noida.";
 
 export const Route = createFileRoute("/about-aoa")({
   head: () => ({
@@ -41,8 +41,8 @@ function AboutAoa() {
     <>
       <PageHero
         eyebrow="About AOA"
-        title="A registered, resident-elected association for Phase 1"
-        subtitle="The Apartment Owners Association of Amrapali Silicon City Phase 1 was formed by owners to take charge of maintenance, safety and representation on behalf of every family living here."
+        title="A registered, resident-elected association for the society"
+        subtitle="The Apartment Owners Association of Amrapali Silicon City was formed by owners to take charge of maintenance, safety and representation on behalf of every family living here."
       />
 
       <section className="section px-4">
@@ -56,7 +56,7 @@ function AboutAoa() {
                 supply, lift reliability, housekeeping and security concerns.
               </p>
               <p>
-                These groups came together to form a single Apartment Owners Association for Phase 1,
+                These groups came together to form a single Apartment Owners Association for the society,
                 registered under the applicable Uttar Pradesh Apartment Act / Societies Registration
                 framework, with an elected Executive Committee, written bylaws and audited accounts.
               </p>
@@ -74,13 +74,13 @@ function AboutAoa() {
                 <h3 className="font-display text-lg font-semibold">Registration Details</h3>
                 <dl className="mt-5 divide-y divide-border text-sm">
                   {[
-                    ["Association name", "Amrapali Silicon City Apartment Owners Association (Phase 1)"],
+                    ["Association name", "Amrapali Silicon City Apartment Owners Association"],
                     ["Jurisdiction", "Sector 76, Noida, Gautam Buddha Nagar, Uttar Pradesh"],
                     ["Registration", "Registered under the applicable UP Apartment / Societies Act"],
                     ["Governing document", "Registered AOA Bylaws (available under Downloads)"],
                     ["Elected body", "President, Vice President, Secretary, Treasurer & Executive Members"],
                     ["Term", "Two years, followed by general body elections"],
-                    ["General body", "All registered apartment owners of Phase 1"],
+                    ["General body", "All registered apartment owners"],
                   ].map(([label, value]) => (
                     <div key={label} className="grid gap-1 py-3 sm:grid-cols-3">
                       <dt className="text-muted-foreground">{label}</dt>
@@ -125,7 +125,7 @@ function AboutAoa() {
             <div className="h-full rounded-4xl border border-border bg-card p-7">
               <h3 className="font-display text-lg font-semibold">Vision</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                To make Amrapali Silicon City Phase 1 the best-managed residential township in Noida —
+                To make Amrapali Silicon City the best-managed residential township in Noida —
                 safe, green, financially sound and genuinely community-led.
               </p>
             </div>

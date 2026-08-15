@@ -50,9 +50,9 @@ import greenImage from "@/assets/green-area.jpg";
 import sportsImage from "@/assets/sports.jpg";
 import clubhouseImage from "@/assets/clubhouse.jpg";
 
-const TITLE = "Amrapali Silicon City AOA — Phase 1, Sector 76 Noida";
+const TITLE = "Amrapali Silicon City AOA — Sector 76, Noida";
 const DESCRIPTION =
-  "Official website of the Amrapali Silicon City Apartment Owners Association, Phase 1, Sector 76, Noida — notices, complaints, events, committee, vendors and resident services.";
+  "Official website of the Amrapali Silicon City Apartment Owners Association, Sector 76, Noida — notices, complaints, events, committee, vendors and resident services.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -154,7 +154,7 @@ function Index() {
               Welcome to
               <span className="mt-2 block text-4xl md:text-6xl">Amrapali Silicon City</span>
               <span className="mt-2 block text-xl font-medium text-white/85 md:text-2xl">
-                Apartment Owners Association · Phase 1
+                Apartment Owners Association
               </span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-sm text-white/80 md:text-base">
@@ -200,7 +200,7 @@ function Index() {
             <div className="relative">
               <img
                 src={societyImage}
-                alt="Towers and landscaped walkways inside Amrapali Silicon City Phase 1"
+                alt="Towers and landscaped walkways inside Amrapali Silicon City"
                 width={1280}
                 height={960}
                 loading="lazy"
@@ -218,7 +218,7 @@ function Index() {
               align="left"
               eyebrow="About the Society"
               title="A township-scale community in the heart of Sector 76"
-              subtitle="Amrapali Silicon City Phase 1 spans 12+ residential towers with landscaped greens, a clubhouse, sports facilities and round-the-clock security — all managed with residents at the centre."
+              subtitle="Amrapali Silicon City spans 12+ residential towers with landscaped greens, a clubhouse, sports facilities and round-the-clock security — all managed with residents at the centre."
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[
@@ -325,7 +325,7 @@ function Index() {
           <SectionHeading
             eyebrow="Community Calendar"
             title="Upcoming events"
-            subtitle="Festivals, sports and welfare drives across Phase 1."
+            subtitle="Festivals, sports and welfare drives across the society."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {EVENTS.filter((e) => e.tag !== "Past")
@@ -413,7 +413,7 @@ function Index() {
                 <div className="group relative overflow-hidden rounded-3xl">
                   <img
                     src={item.src}
-                    alt={`${item.label} at Amrapali Silicon City Phase 1`}
+                    alt={`${item.label} at Amrapali Silicon City`}
                     loading="lazy"
                     className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -499,7 +499,7 @@ function Index() {
           <SectionHeading
             eyebrow="Latest News"
             title="Society, construction & authority updates"
-            subtitle="Including NBCC progress and Noida Authority circulars affecting Phase 1."
+            subtitle="Including NBCC progress and Noida Authority circulars affecting the society."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {NEWS.map((item, i) => (

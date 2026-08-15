@@ -9,7 +9,7 @@ import { COMMITTEE } from "@/data/site";
 
 const TITLE = "Committee Members — President, Secretary & Executives | Silicon City AOA";
 const DESCRIPTION =
-  "Meet the elected office bearers and executive members of Amrapali Silicon City AOA Phase 1 — roles, responsibilities and direct contact details.";
+  "Meet the elected office bearers and executive members of Amrapali Silicon City AOA — roles, responsibilities and direct contact details.";
 
 export const Route = createFileRoute("/committee")({
   head: () => ({

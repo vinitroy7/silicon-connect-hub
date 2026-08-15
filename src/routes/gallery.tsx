@@ -12,7 +12,7 @@ import sportsImage from "@/assets/sports.jpg";
 
 const TITLE = "Gallery — Photos, Drone Footage & Facilities | Silicon City AOA";
 const DESCRIPTION =
-  "Photo and video gallery of Amrapali Silicon City Phase 1 — drone footage, festival albums, clubhouse, sports area, green spaces and construction progress.";
+  "Photo and video gallery of Amrapali Silicon City — drone footage, festival albums, clubhouse, sports area, green spaces and construction progress.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -52,7 +52,7 @@ function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Photos & videos from across the campus"
-        subtitle="Curated albums of society life — celebrations, amenities, greens and construction progress in Phase 1."
+        subtitle="Curated albums of society life — celebrations, amenities, greens and construction progress in."
       />
 
       <section className="section px-4">
@@ -79,7 +79,7 @@ function GalleryPage() {
                 <figure className="group relative overflow-hidden rounded-3xl">
                   <img
                     src={item.src}
-                    alt={`${item.label} — Amrapali Silicon City Phase 1`}
+                    alt={`${item.label} — Amrapali Silicon City`}
                     loading="lazy"
                     className="h-60 w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
