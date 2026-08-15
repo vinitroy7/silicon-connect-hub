@@ -12,7 +12,7 @@ import { FAQS } from "@/data/site";
 
 const TITLE = "FAQs — Membership, Maintenance & Rules | Silicon City AOA";
 const DESCRIPTION =
-  "Frequently asked questions about AOA membership, maintenance charges, complaints, tenant registration, hall booking, pets and visitor entry at Amrapali Silicon City Phase 1.";
+  "Frequently asked questions about AOA membership, maintenance charges, complaints, tenant registration, hall booking, pets and visitor entry at Amrapali Silicon City.";
 
 export const Route = createFileRoute("/faqs")({
   head: () => ({

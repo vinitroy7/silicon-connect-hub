@@ -10,7 +10,7 @@ import { DOWNLOADS } from "@/data/site";
 
 const TITLE = "Downloads — AOA Forms, Bylaws & Circulars | Silicon City AOA";
 const DESCRIPTION =
-  "Download AOA forms, membership form, NOC request, bylaws, AGM minutes, maintenance circulars, parking rules and the emergency SOP for Amrapali Silicon City Phase 1.";
+  "Download AOA forms, membership form, NOC request, bylaws, AGM minutes, maintenance circulars, parking rules and the emergency SOP for Amrapali Silicon City.";
 
 export const Route = createFileRoute("/downloads")({
   head: () => ({

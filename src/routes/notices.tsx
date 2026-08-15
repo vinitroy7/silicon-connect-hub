@@ -10,7 +10,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { NOTICES } from "@/data/site";
 
-const TITLE = "Notices & Circulars — Amrapali Silicon City AOA Phase 1";
+const TITLE = "Notices & Circulars — Amrapali Silicon City AOA";
 const DESCRIPTION =
   "Search and download official notices, maintenance circulars, electricity shutdown alerts, AGM notices and legal updates from Amrapali Silicon City AOA, Sector 76 Noida.";
 

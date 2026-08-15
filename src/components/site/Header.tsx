@@ -10,6 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logoAsset from "@/assets/aoa-logo.jpeg.asset.json";
 import { NAV_LINKS, SOCIETY } from "@/data/site";
 
 const PRIMARY = ["Home", "About Society", "Committee", "Services", "Notices", "Events", "Gallery"];
@@ -27,7 +28,7 @@ export function Header() {
             <Phone className="size-3.5" /> Helpdesk {SOCIETY.phone}
           </span>
           <span className="inline-flex items-center gap-2">
-            <ShieldAlert className="size-3.5" /> Emergency 112 · Lift Support +91 98110 22334
+            <ShieldAlert className="size-3.5" /> Emergency 112 · {SOCIETY.email}
           </span>
         </div>
       </div>
@@ -35,15 +36,17 @@ export function Header() {
       <div className="glass border-x-0 border-t-0">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3">
           <Link to="/" className="flex items-center gap-3">
-            <span className="gradient-brand flex size-11 items-center justify-center rounded-2xl text-sm font-bold text-primary-foreground shadow-card">
-              ASC
-            </span>
+            <img
+              src={logoAsset.url}
+              alt="Amrapali Silicon City AOA logo"
+              className="size-11 rounded-2xl bg-white object-contain shadow-card"
+            />
             <span className="leading-tight">
               <span className="block font-display text-sm font-semibold md:text-base">
                 {SOCIETY.name} AOA
               </span>
               <span className="block text-[11px] text-muted-foreground">
-                {SOCIETY.phase} · Sector 76, Noida
+                Sector 76, Noida
               </span>
             </span>
           </Link>
@@ -75,7 +78,7 @@ export function Header() {
 
           <div className="ml-auto flex items-center gap-2 lg:ml-0">
             <Button asChild variant="brand" size="sm" className="hidden sm:inline-flex">
-              <Link to="/login">Resident Login</Link>
+              <Link to="/complaints">Raise Complaint</Link>
             </Button>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild className="lg:hidden">
@@ -97,9 +100,9 @@ export function Header() {
                     </Link>
                   ))}
                   <Button asChild variant="brand" className="mt-4">
-                    <Link to="/login" onClick={() => setOpen(false)}>
-                      Resident Login
-                    </Link>
+                    <a href={`tel:${SOCIETY.phone.replace(/\s/g, "")}`}>
+                      Call Helpdesk {SOCIETY.phone}
+                    </a>
                   </Button>
                 </div>
               </SheetContent>

@@ -20,7 +20,6 @@ import { Route as EmergencyContactsRouteImport } from './routes/emergency-contac
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as FaqsRouteImport } from './routes/faqs'
 import { Route as GalleryRouteImport } from './routes/gallery'
-import { Route as LoginRouteImport } from './routes/login'
 import { Route as NoticesRouteImport } from './routes/notices'
 import { Route as ResidentCornerRouteImport } from './routes/resident-corner'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -81,11 +80,6 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const NoticesRoute = NoticesRouteImport.update({
   id: '/notices',
   path: '/notices',
@@ -119,7 +113,6 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/faqs': typeof FaqsRoute
   '/gallery': typeof GalleryRoute
-  '/login': typeof LoginRoute
   '/notices': typeof NoticesRoute
   '/resident-corner': typeof ResidentCornerRoute
   '/services': typeof ServicesRoute
@@ -137,7 +130,6 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/faqs': typeof FaqsRoute
   '/gallery': typeof GalleryRoute
-  '/login': typeof LoginRoute
   '/notices': typeof NoticesRoute
   '/resident-corner': typeof ResidentCornerRoute
   '/services': typeof ServicesRoute
@@ -156,7 +148,6 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/faqs': typeof FaqsRoute
   '/gallery': typeof GalleryRoute
-  '/login': typeof LoginRoute
   '/notices': typeof NoticesRoute
   '/resident-corner': typeof ResidentCornerRoute
   '/services': typeof ServicesRoute
@@ -176,7 +167,6 @@ export interface FileRouteTypes {
     | '/events'
     | '/faqs'
     | '/gallery'
-    | '/login'
     | '/notices'
     | '/resident-corner'
     | '/services'
@@ -194,7 +184,6 @@ export interface FileRouteTypes {
     | '/events'
     | '/faqs'
     | '/gallery'
-    | '/login'
     | '/notices'
     | '/resident-corner'
     | '/services'
@@ -212,7 +201,6 @@ export interface FileRouteTypes {
     | '/events'
     | '/faqs'
     | '/gallery'
-    | '/login'
     | '/notices'
     | '/resident-corner'
     | '/services'
@@ -231,7 +219,6 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   FaqsRoute: typeof FaqsRoute
   GalleryRoute: typeof GalleryRoute
-  LoginRoute: typeof LoginRoute
   NoticesRoute: typeof NoticesRoute
   ResidentCornerRoute: typeof ResidentCornerRoute
   ServicesRoute: typeof ServicesRoute
@@ -317,13 +304,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/notices': {
       id: '/notices'
       path: '/notices'
@@ -367,7 +347,6 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   FaqsRoute: FaqsRoute,
   GalleryRoute: GalleryRoute,
-  LoginRoute: LoginRoute,
   NoticesRoute: NoticesRoute,
   ResidentCornerRoute: ResidentCornerRoute,
   ServicesRoute: ServicesRoute,
@@ -376,3 +355,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

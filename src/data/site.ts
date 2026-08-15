@@ -1,12 +1,12 @@
 export const SOCIETY = {
   name: "Amrapali Silicon City",
   aoa: "Apartment Owners Association",
-  phase: "Phase 1",
-  address: "Amrapali Silicon City, Phase 1, Sector 76, Noida, Uttar Pradesh 201301",
-  phone: "+91 120 400 0000",
-  email: "office@amrapalisiliconcityaoa.org",
+  registration: "R/GBN/15963/2025-2026",
+  address: "Amrapali Silicon City, Sector 76, Noida, Uttar Pradesh 201301",
+  phone: "0120 510 0486",
+  email: "communication@ascaoa.com",
   hours: "Mon – Sat, 10:00 AM – 6:00 PM (Sunday closed)",
-  whatsapp: "911204000000",
+  whatsapp: "911205100486",
   mapEmbed:
     "https://www.google.com/maps?q=Amrapali+Silicon+City+Sector+76+Noida&output=embed",
 };
@@ -46,7 +46,7 @@ export const QUICK_SERVICES = [
   { title: "Book Community Hall", desc: "Reserve the clubhouse or lawn.", to: "/resident-corner", icon: "calendar" },
   { title: "Lost & Found", desc: "Report or claim lost belongings.", to: "/resident-corner", icon: "search" },
   { title: "Vendor Directory", desc: "Verified plumbers, electricians, more.", to: "/vendors", icon: "hammer" },
-  { title: "Resident Login", desc: "Access your member dashboard.", to: "/login", icon: "lock" },
+  { title: "Contact AOA Office", desc: "Helpdesk, email and office address.", to: "/contact", icon: "lock" },
 ];
 
 export const NOTICES = [
@@ -70,12 +70,16 @@ export const EVENTS = [
 ];
 
 export const COMMITTEE = [
-  { name: "Rajeev Sharma", role: "President", phone: "+91 98100 00001", email: "president@ascaoa.org", bio: "Resident of Tower C since 2014. Leads AOA governance, legal coordination and NBCC liaison.", duties: ["Overall governance", "Legal & authority liaison", "Committee oversight"] },
-  { name: "Neha Verma", role: "Vice President", phone: "+91 98100 00002", email: "vp@ascaoa.org", bio: "Focused on resident welfare, events and community engagement programmes.", duties: ["Resident welfare", "Events & culture", "Women's safety"] },
-  { name: "Amit Nagpal", role: "Secretary", phone: "+91 98100 00003", email: "secretary@ascaoa.org", bio: "Handles notices, meeting minutes, records and official correspondence.", duties: ["Notices & minutes", "Records & bylaws", "Membership"] },
-  { name: "Sunita Rathi", role: "Treasurer", phone: "+91 98100 00004", email: "treasurer@ascaoa.org", bio: "Manages maintenance collections, audits and transparent financial reporting.", duties: ["Accounts & audit", "Maintenance billing", "Budgets"] },
-  { name: "Vikram Singh", role: "Executive Member – Security", phone: "+91 98100 00005", email: "security@ascaoa.org", bio: "Coordinates guarding agency, CCTV coverage and visitor management.", duties: ["Security & CCTV", "Visitor management", "Parking discipline"] },
-  { name: "Pooja Mehta", role: "Executive Member – Housekeeping", phone: "+91 98100 00006", email: "housekeeping@ascaoa.org", bio: "Oversees cleaning, waste segregation and horticulture across the campus.", duties: ["Housekeeping", "Waste management", "Horticulture"] },
+  { name: "Mr. Anil Sood", role: "President", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Leads AOA governance, legal coordination and liaison with authorities.", duties: ["Overall governance", "Authority & legal liaison", "Committee oversight"] },
+  { name: "Mr. Jaypal Singh", role: "Vice President", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Supports governance and drives resident welfare and community engagement.", duties: ["Resident welfare", "Community engagement", "Support to President"] },
+  { name: "Mr. Basant Sharma", role: "Secretary", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Handles notices, meeting minutes, records and official correspondence.", duties: ["Notices & minutes", "Records & bylaws", "Membership"] },
+  { name: "Mr. Ravi Dutt", role: "Joint Secretary", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Assists the Secretary with documentation and resident communication.", duties: ["Documentation", "Resident communication", "Meeting coordination"] },
+  { name: "Mr. Gaurang Sharma", role: "Treasurer", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Manages maintenance collections, audits and transparent financial reporting.", duties: ["Accounts & audit", "Maintenance billing", "Budgets"] },
+  { name: "Mr. Upendra Kumar Jain", role: "Joint Treasurer", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Assists with collections, vendor payments and financial records.", duties: ["Collections support", "Vendor payments", "Financial records"] },
+  { name: "Mr. Sandeep Pathak", role: "Member", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Executive committee member working on society operations and resident issues.", duties: ["Operations support", "Resident issues", "Committee initiatives"] },
+  { name: "Mr. Ritesh Anand", role: "Member", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Executive committee member working on society operations and resident issues.", duties: ["Operations support", "Resident issues", "Committee initiatives"] },
+  { name: "Mr. Devendra Saini", role: "Member", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Executive committee member working on society operations and resident issues.", duties: ["Operations support", "Resident issues", "Committee initiatives"] },
+  { name: "Mr. Yogesh Bhardwaj", role: "Member", phone: "0120 510 0486", email: "communication@ascaoa.com", bio: "Executive committee member working on society operations and resident issues.", duties: ["Operations support", "Resident issues", "Committee initiatives"] },
 ];
 
 export const EMERGENCY = [
@@ -85,10 +89,9 @@ export const EMERGENCY = [
   { label: "Sector 76 Police Chowki", number: "+91 120 245 6789", group: "Local" },
   { label: "Nearest Hospital (Felix / Kailash)", number: "+91 120 411 1111", group: "Local" },
   { label: "Electricity Complaint (NPCL)", number: "+91 120 663 2222", group: "Utility" },
-  { label: "Lift Support (24x7)", number: "+91 98110 22334", group: "Society" },
   { label: "Water Supply Team", number: "+91 98110 22335", group: "Society" },
   { label: "Security Office – Main Gate", number: "+91 98110 22336", group: "Society" },
-  { label: "Maintenance Helpdesk", number: "+91 98110 22337", group: "Society" },
+  { label: "Maintenance Helpdesk", number: "0120 510 0486", group: "Society" },
 ];
 
 export const VENDORS = [
@@ -131,7 +134,7 @@ export const NEWS = [
 ];
 
 export const FAQS = [
-  { q: "Who can become a member of the AOA?", a: "Every registered apartment owner of Amrapali Silicon City Phase 1 is eligible for membership. Submit the membership form along with proof of ownership and a copy of your ID at the AOA office or through Resident Corner." },
+  { q: "Who can become a member of the AOA?", a: "Every registered apartment owner of Amrapali Silicon City is eligible for membership. Submit the membership form along with proof of ownership and a copy of your ID at the AOA office or through Resident Corner." },
   { q: "How is the monthly maintenance calculated?", a: "Maintenance is charged on a per sq. ft. super-area basis as approved in the general body meeting, plus applicable sinking fund and utility components. The current rate card is published under Downloads." },
   { q: "How do I raise and track a complaint?", a: "Use the Complaint Portal, pick a category, attach a photo and submit. You receive a ticket number instantly and can track status changes, with email and SMS updates at each stage." },
   { q: "What is the process for tenant registration?", a: "Owners must submit the tenant registration form with the rent agreement, police verification and tenant ID proof. Access cards and vehicle stickers are issued after verification." },

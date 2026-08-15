@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 
+import logoAsset from "@/assets/aoa-logo.jpeg.asset.json";
 import { EMERGENCY, NAV_LINKS, SOCIETY } from "@/data/site";
 
 export function Footer() {
@@ -9,13 +10,15 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="gradient-brand flex size-11 items-center justify-center rounded-2xl text-sm font-bold text-primary-foreground">
-              ASC
-            </span>
+            <img
+              src={logoAsset.url}
+              alt="Amrapali Silicon City AOA logo"
+              className="size-11 rounded-2xl bg-white object-contain"
+            />
             <span className="font-display font-semibold">
               {SOCIETY.name} AOA
               <span className="block text-xs font-normal text-muted-foreground">
-                {SOCIETY.phase}, Sector 76, Noida
+                Sector 76, Noida
               </span>
             </span>
           </div>
@@ -90,8 +93,8 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {SOCIETY.name} {SOCIETY.aoa}, {SOCIETY.phase}, Sector 76,
-        Noida. All rights reserved.
+        © {new Date().getFullYear()} {SOCIETY.name} {SOCIETY.aoa}, Sector 76, Noida. All rights
+        reserved.
       </div>
     </footer>
   );

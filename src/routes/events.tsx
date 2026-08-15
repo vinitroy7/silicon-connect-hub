@@ -16,7 +16,7 @@ import greenImage from "@/assets/green-area.jpg";
 
 const TITLE = "Events & Community Calendar — Amrapali Silicon City AOA";
 const DESCRIPTION =
-  "Upcoming and past events at Amrapali Silicon City Phase 1 — festivals, sports day, blood donation camps, yoga sessions and resident meetings with RSVP and volunteer signup.";
+  "Upcoming and past events at Amrapali Silicon City — festivals, sports day, blood donation camps, yoga sessions and resident meetings with RSVP and volunteer signup.";
 
 export const Route = createFileRoute("/events")({
   head: () => ({

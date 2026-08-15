@@ -7,7 +7,7 @@ import { EMERGENCY } from "@/data/site";
 
 const TITLE = "Emergency Contacts — Police, Fire, Ambulance & Lift Help | Silicon City AOA";
 const DESCRIPTION =
-  "Emergency numbers for Amrapali Silicon City Phase 1 residents — police, fire, ambulance, hospital, electricity, lift support, water supply, security office and maintenance helpdesk.";
+  "Emergency numbers for Amrapali Silicon City residents — police, fire, ambulance, hospital, electricity, lift support, water supply, security office and maintenance helpdesk.";
 
 export const Route = createFileRoute("/emergency-contacts")({
   head: () => ({

@@ -14,7 +14,7 @@ import { SOCIETY } from "@/data/site";
 
 const TITLE = "Contact AOA Office — Sector 76 Noida | Amrapali Silicon City";
 const DESCRIPTION =
-  "Contact the Amrapali Silicon City AOA Phase 1 office in Sector 76, Noida — address, phone, email, working hours, WhatsApp and enquiry form.";
+  "Contact the Amrapali Silicon City AOA office in Sector 76, Noida — address, phone, email, working hours, WhatsApp and enquiry form.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
