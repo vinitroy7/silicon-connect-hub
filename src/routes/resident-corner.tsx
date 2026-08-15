@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -48,7 +48,7 @@ function ResidentCorner() {
       <PageHero
         eyebrow="Resident Corner"
         title="Your services, in one place"
-        subtitle="Sign in to your member dashboard to raise requests, pay maintenance and manage visitors. Requests move to the AOA helpdesk with a tracking reference."
+        subtitle="Raise requests, check maintenance status and manage visitors through the AOA helpdesk. Every request is logged with a tracking reference."
       />
 
       <section className="section px-4">
