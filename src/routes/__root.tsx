@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Amrapali Silicon City Apartment Owners Association —",
+          name: "Amrapali Silicon City Apartment Owners Association",
           description:
             "Registered Apartment Owners Association of Amrapali Silicon City, Sector 76, Noida.",
           address: {
@@ -117,8 +117,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             postalCode: "201301",
             addressCountry: "IN",
           },
-          telephone: "+91 120 400 0000",
-          email: "office@amrapalisiliconcityaoa.org",
+          telephone: "+91 120 510 0486",
+          email: "communication@ascaoa.com",
         }),
       },
     ],
